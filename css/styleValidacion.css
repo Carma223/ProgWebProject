@@ -1,0 +1,60 @@
+
+form label{
+	position: relative;
+	display: block;
+}
+form input{
+	margin: 10px 0;
+	width: 100%;
+	background: #000;
+	color: aliceblue;
+	padding: 10px;
+	border-radius: 6px;
+	font-size: 18px;
+	border: none;
+	outline: none;
+}
+.emailText,
+.passText,
+.emailText2,
+.passText2,
+.passEqual{
+	display: block;
+	font-weight: 300;
+	font-style: italic;
+	padding: 5px;
+}
+
+label.valid .emailText,
+label.valid .passText,
+label.valid .emailText2,
+label.valid .passText2,
+label.valid .passEqual{
+	color: #00ff00;
+}
+
+label.invalid .emailText,
+label.invalid .passText,
+label.invalid .emailText2,
+label.invalid .passText2,
+label.invalid .passEqual{
+	color: #f00;
+}
+label.valid::before,
+label.invalid::before
+{
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 18px;
+	right: 5px;
+	z-index: 100;
+}
+label.valid::before{
+	background: url(/img/check.svg) no-repeat center /cover;
+}
+label.invalid::before{
+	background: url(/img/error.png) no-repeat center /cover;
+}
+
